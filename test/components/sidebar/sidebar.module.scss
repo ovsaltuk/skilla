@@ -1,0 +1,14 @@
+@import '../generic/var.module';
+
+.sidebar {
+  padding: 20px 0;
+  background-color: $bgc-sidebar;
+  & .sidebar__logo {
+    margin-bottom: 32px;
+  }
+  & .sidebar__nav {
+    margin-bottom: 32px;
+  }
+}
+
+

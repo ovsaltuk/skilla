@@ -1,0 +1,55 @@
+@import '../generic/var.module';
+
+.nav {
+  &__list {
+    list-style-type: none;
+    
+  }
+
+  &__listItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    height: 52px;
+    border-left: 3px solid transparent;
+    color: $text-gray;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color .3s ease-in-out,
+      border-color .3s ease-in-out,
+      background-color .3s ease-in-out;
+    & svg {
+      fill: currentColor;
+      margin-right: 13px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      height: 8px;
+      width: 8px;
+      border-radius: 100%;
+      background-color: transparent;
+      box-shadow: none;
+      transform: translateY(-4px);
+      transition: background-color .3s ease-in-out,
+        box-shadow .3s ease-in-out;
+    }
+    &:hover {
+      border-color: $color-accent;
+      color: $text-white;
+      background-color: $nav-item-active-bcg;
+    }
+    &.active {
+      border-color: $color-accent;
+      color: $text-white;
+      background-color: $nav-item-active-bcg;
+    }
+    &.active::before {
+      background-color: $color-elements-yellow;
+      box-shadow: 0px 3px 8px rgba(237, 218, 1, 0.5);
+    }
+  }
+}
